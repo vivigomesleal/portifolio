@@ -199,7 +199,6 @@
   }
 
   .about-content p {
-    color: #f3f4fa;
     font-size: 1rem;
     line-height: 1.7;
   }
@@ -246,6 +245,14 @@
 
   .project-item button {
     min-height: 48px;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .project-details img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .servicos {

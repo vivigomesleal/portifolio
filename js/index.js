@@ -7,16 +7,37 @@ window.addEventListener("load", () => {
 
 
 
-document.querySelectorAll(".project-item button").forEach(btn => {
+function updateProjectHeight(item, open) {
+  const details = item.querySelector(".project-details");
+  if (!details) return;
+
+  if (open) {
+    details.style.maxHeight = details.scrollHeight + "px";
+    details.style.opacity = "1";
+    details.style.marginTop = "12px";
+  } else {
+    details.style.maxHeight = "0px";
+    details.style.opacity = "0";
+    details.style.marginTop = "0";
+  }
+}
+
+document.querySelectorAll(".project-item button").forEach((btn) => {
   btn.addEventListener("click", () => {
-    const item = btn.parentElement;
+    const item = btn.closest(".project-item");
     const isActive = item.classList.toggle("active");
 
     btn.textContent = isActive ? "Ver menos" : "Ver mais";
     btn.setAttribute("aria-expanded", isActive);
+    updateProjectHeight(item, isActive);
   });
 });
 
+window.addEventListener("resize", () => {
+  document.querySelectorAll(".project-item.active").forEach((item) => {
+    updateProjectHeight(item, true);
+  });
+});
 
 const track = document.querySelector('.testimonials-track');
 const cards = document.querySelectorAll('.testimonial-card');
@@ -318,7 +339,7 @@ const translations = {
 
     services_cta: "Talk to me",
 
-    testimonials_title: "Testimonials",
+    testimonials_title: "Feedback",
     testimonial_prev: "Previous testimonial",
     testimonial_next: "Next testimonial",
     testimonial1_text: "Text.",

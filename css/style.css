@@ -687,17 +687,7 @@ button:focus-visible {
     inset 0 0 20px rgba(0, 229, 255, 0.08);
 }
 
-/* RESPONSIVO */
-@media (max-width: 1000px) {
-  .projects-layout {
-    flex-direction: column;
-  }
 
-  .projetos-sites,
-  .projetos-Midias {
-    width: 100%;
-  }
-}
 
 /* CARD */
 .project-list {
@@ -765,12 +755,13 @@ button:focus-visible {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.45s ease, opacity 0.35s ease, margin-top 0.35s ease;
+  transition: max-height 0.4s ease, opacity 0.35s ease, margin-top 0.35s ease;
   margin-top: 0;
+
 }
 
+
 .project-item.active .project-details {
-  max-height: 700px;
   opacity: 1;
   margin-top: 12px;
 }
