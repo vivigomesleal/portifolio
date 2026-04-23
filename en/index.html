@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vivi Gomes | Front-End Web Developer & Digital Advisor</title>
+
+  <meta name="description" content="Front-End Web Developer specialized in websites, landing pages, digital strategy, branding and social media management.">
+  <meta name="keywords" content="front end developer, web developer, portfolio, landing page developer, digital marketing, branding, social media management">
+  <meta name="author" content="Vivi Gomes">
+
+   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+   <link rel="shortcut icon" href="../img/favicon.ico">
+
+  <link rel="canonical" href="https://www.vivigomesdigital.com/en/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+
+<header>
+  <nav class="header-desktop" aria-label="Navegação principal desktop">
+    <div class="logo">
+      <img src="../img/vglogo.webp" alt="Logo da Vivi Gomes Digital">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#home" data-i18n="nav_home">Home</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#servicos" data-i18n="nav_services">Services</a></li>
+      <li><a href="#contact-box" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+
+    <div class="lang-switch" aria-label="Selecionar idioma">
+       <a id="btn-pt" href="../index.html">PT</a>
+       <a id="btn-en" href="#">EN</a>
+    </div>
+  </nav>
+
+  <div class="mobile-topbar" aria-label="Barra superior mobile">
+    <a href="#home" class="mobile-logo-link" aria-label="Ir para a seção inicial">
+      <img src="../img/vglogo.webp" alt="Logo da Vivi Gomes Digital">
+    </a>
+
+   <div class="lang-switch-mobile" aria-label="Select language">
+    <a id="btn-pt" href="../index.html">PT</a>
+    <a id="btn-en" href="#">EN</a>
+  </div>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Navegação principal mobile">
+    <ul>
+      <li>
+        <a href="#home" aria-label="Ir para Home">
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+          <span data-i18n="nav_home">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about" aria-label="Ir para Sobre Mim">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+          <span data-i18n="nav_about_short">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#projects" aria-label="Ir para Projetos">
+          <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+          <span data-i18n="nav_projects">Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="#servicos" aria-label="Ir para Serviços">
+          <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+          <span data-i18n="nav_services">Services</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact-box" aria-label="Ir para Contato">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          <span data-i18n="nav_contact">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="hidden main-container">
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h2>Hi, I'm Vivi Gomes</h2>
+    <p>Front-End Web Developer & Digital Consulting</p>
+    <a href="#projects" class="btn primary">View Projects</a>
+    <a href="#servicos" class="btn primary">My Services</a>
+  </div>
+</section>
+
+ <section id="about" class="about-section">
+    <div class="about-card">
+      <div class="animated-border"></div>
+      <div class="img-text">
+        <div class="about-image">
+          <img src="../img/vivigomes.avif" alt="Minha foto">
+        </div>
+
+        <div class="about-content">
+          <h2 data-i18n="about_title">About me</h2>
+
+          <p data-i18n="about_text">
+            I am a web developer in training at the Systems for the Internet course at FATEC Rubens Lara, driven by curiosity, creativity and the real desire to
+            transform ideas into digital solutions. I started my journey in Social Media looking for courses in Digital Marketing, ADS and Graphic Design, but soon I discovered my true passion: web development.
+            I like challenges, learning something new every day and creating interfaces that make sense for
+            real people.
+            Today I have the vision that companies and small entrepreneurs need a strong and effective digital presence to grow in today's competitive market.
+            I am here to help transform these needs into reality, creating websites and web applications that are not only visually appealing, but also functional and easy to use.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-buttons">
+        <a href="../pdf/Resumo-VivianGomes-PT-EN.pdf" download="Curriculo-Vivi-Gomes.pdf" class="btn primary" data-i18n="about_btn_cv">📄 Download CV</a>
+        <a href="https://www.linkedin.com/in/vivian-gomes-leal-a9989b322" target="_blank" class="btn linkedin">LinkedIn</a>
+        <a href="https://github.com/vivigomesleal" target="_blank" class="btn github">GitHub</a>
+        <a href="https://wa.me/5513996863507" target="_blank" class="btn whatsapp">WhatsApp</a>
+      </div>
+
+      <h3 class="title-skills" data-i18n="skills_title">Technologies & Tools</h3>
+
+      <div class="skills-icons">
+        <img src="../img/icons/html.svg" alt="HTML">
+        <img src="../img/icons/css.svg" alt="CSS">
+        <img src="../img/icons/javascript.svg" alt="JavaScript">
+        <img src="../img/icons/python.svg" alt="Python">
+        <img src="../img/icons/figma.svg" alt="Figma">
+        <img src="../img/icons/github.svg" alt="GitHub">
+        <img src="../img/icons/capcut.svg" alt="CapCut">
+        <img src="../img/icons/canva.svg" alt="Canva">
+        <img src="../img/icons/linux.svg" alt="Linux">
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 data-i18n="projects_title">Projects</h2>
+
+    <div class="projects-layout">
+
+      <div class="projetos-sites">
+        <h3 data-i18n="projects_sites_title">Sites</h3>
+
+        <h4 data-i18n="projects_fatec_title">Projects from FATEC Rubens Lara</h4>
+        <div class="project-list">
+          <div class="project-item">
+            <h4 data-i18n="project1_title">Project - Gelateria Havana</h4>
+            <p data-i18n="project1_desc">Landing page site for positioning a company in a extracurricular work in a group</p>
+            <button data-i18n="btn_see_more">See more</button>
+            <div class="project-details">
+              <img src="../img/gelateria-havana.avif">
+              <p data-i18n="project1_details">The project was developed in a group in the Design subject to develop our ability to build a prototype in Figma for a real company with documentation authorization and website implementation in HTML, CSS and JavaScript.</p>
+              <a href="https://gelateria-havana.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="btn_access_project">Access Project</a>
+            </div>
+          </div>
+        </div>
+
+        <h4 data-i18n="landing_page_title">Landing Page</h4>
+        <div class="project-list">
+          <div class="project-item">
+            <h4 data-i18n="project2_title">Salerno Consultorias</h4>
+            <p data-i18n="project2_desc">Creation of an institutional website for Salerno Consultorias, with a focus on digital positioning and strategic communication of services.</p>
+            <button data-i18n="btn_see_more">See more</button>
+            <div class="project-details">
+              <img src="../img/salernoconsultorias.avif">
+              <p data-i18n="project2_details">The project involved planning the structure, modern design with a professional identity, and responsive development, ensuring a smooth navigation across different devices. The main objective was to increase the brand's credibility, organize information clearly, and facilitate contact with potential clients, reinforcing the value proposition of the consultancy in the business market.</p>
+              <a href="https://salernoconsultorias.com.br/" target="_blank" rel="noopener noreferrer" data-i18n="btn_access_project">Access Project</a>
+            </div>
+          </div>
+        </div>
+
+        <h4 data-i18n="institutional_site_title">Institutional Site</h4>
+        <div class="project-list">
+          <div class="project-item">
+            <h4 data-i18n="project3_title">Affetto - Clinical Specialties</h4>
+            <p data-i18n="project3_desc">Creation of an institutional website for Affetto Clinical Specialties, with a focus on digital presence and patient experience.</p>
+            <button data-i18n="btn_see_more">See more</button>
+            <div class="project-details">
+              <img src="../img/Affetto.avif">
+              <p data-i18n="project3_details">The project involved strategic organization of information, a clean and accessible design, and responsive development to ensure usability across all devices. The objective was to strengthen the clinic's credibility, facilitate contact, and transmit a clear, welcoming, and trustworthy communication.</p>
+              <a href="https://affettoespecialidades.com.br/" target="_blank" rel="noopener noreferrer" data-i18n="btn_access_project">Access Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projetos-Midias">
+        <h3 data-i18n="digital_media_title">Social Media</h3>
+
+        <h4 data-i18n="social_media_advisory_title">Social Media Advisory</h4>
+        <div class="project-list">
+          <div class="project-item">
+            <h4 data-i18n="project4_title">Instagram da Gelateria Havana</h4>
+            <p data-i18n="project4_desc">Complete social media advisory with focus on brand positioning and digital growth.</p>
+            <button data-i18n="btn_see_more">See more</button>
+            <div class="project-details">
+              <img src="../img/instagram-gelateriahavana.avif">
+              <p data-i18n="project4_details">The project includes a deep study of the company's identity, definition of visual language, and strategic content planning. Posts, reels, and stories are produced with a structured publishing calendar, ensuring consistency and greater reach. The objective is to increase brand visibility, generate engagement, and strengthen its authority in the digital environment.</p>
+              <a href="https://drive.google.com/drive/folders/1bQ3VvSiCcFzR-dDxS6joEf5lmsPSGALm?usp=sharing" target="_blank" rel="noopener noreferrer"data-i18n="btn_access_project">Access Project</a>
+            </div>
+          </div>
+        </div>
+
+        <h4 data-i18n="crm_advisory_title">Professional CRM Advisory</h4>
+        <div class="project-list">
+          <div class="project-item">
+            <h4 data-i18n="project5_title">Real Estate Agents</h4>
+            <p data-i18n="project5_desc">Complete advisory for real estate agents in system management and digital presence</p>
+            <button data-i18n="btn_see_more">See more</button>
+            <div class="project-details">
+              <img src="../img/projeto1.avif">
+              <p data-i18n="project5_details">The project includes CRM organization, property listing with photos, videos, and professional descriptions, as well as the creation of a visual identity for advertisements. The objective is to increase property visibility, attract more clients, and allow real estate agents to focus on closing sales while the digital aspect is managed strategically.</p>
+              <a href="https://drive.google.com/drive/folders/1ITztU8OxkIC_NEl0r5Psr25r6louAaYS?usp=sharing" target="_blank" rel="noopener noreferrer"data-i18n="btn_access_project">Access Project</a>
+            </div>
+          </div>
+        </div>
+
+        <h4 data-i18n="logos_identity_title">Logos and Visual Identity</h4>
+        <div class="project-list">
+          <div class="project-item">
+            <h4 data-i18n="project6_title">Logo for some professionals</h4>
+            <p data-i18n="project6_desc">I develop exclusive logos that represent the essence of your brand, combining creativity, strategy, and technology.</p>
+            <button data-i18n="btn_see_more">See more</button>
+            <div class="project-details">
+              <img src="../img/logotipos.avif">
+              <p data-i18n="project6_details">More than just a design, my goal is to build together with you a strong and authentic brand. We work in partnership to understand what makes sense for your business, translating values, purpose, and positioning into a unique visual identity. Each project is thought out in a personalized way, ensuring that your brand stands out in the market and connects genuinely with your audience.</p>
+              <!-- <a href="#" data-i18n="btn_access_project">Access Project</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<section id="servicos" class="servicos">
+  <h2 data-i18n="services_title">My Services</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <h3 data-i18n="service1_title">Web Development</h3>
+      <p data-i18n="service1_item1">Landing Pages</p>
+      <p data-i18n="service1_item2">Institutional Sites</p>
+      <p data-i18n="service1_item3">Mobile</p>
+      <p data-i18n="service1_item4">WordPress</p>
+      <p data-i18n="service1_item5">Maintenance and Support</p>
+    </div>
+
+    <div class="service-card">
+      <h3 data-i18n="service2_title">Digital Consulting</h3>
+      <p data-i18n="service2_text">Position a company or professional in the digital world, including registration on Google Business to increase visibility.</p>
+    </div>
+
+    <div class="service-card">
+      <h3 data-i18n="service3_title">Instagram Management</h3>
+      <p data-i18n="service3_item1">Content Planning</p> 
+      <p data-i18n="service3_item2">Reels and Stories Creation</p>
+      <p data-i18n="service3_item3">Strategic Publication Calendar</p>
+      <p data-i18n="service3_item4">Complete Instagram Management with a focus on growth, engagement, and brand positioning, utilizing strategic and consistent content.</p>
+    </div>
+
+    <div class="service-card">
+      <h3 data-i18n="service4_title">Visual Identity & Design</h3>
+      <p data-i18n="service4_item1">Logos</p>
+      <p data-i18n="service4_item2">Complete Visual Identity</p>
+      <p data-i18n="service4_item3">Development of unique and professional visual identities, aligned with your brand's purpose and designed to generate recognition and connection with your audience.</p>
+    </div>
+
+    <div class="service-card">
+      <h3 data-i18n="service5_title">CRM for Professionals</h3>
+      <p data-i18n="service5_item1">Customized systems for customer management</p>
+      <p data-i18n="service5_item2">E-commerce</p>
+      <p data-i18n="service5_item3">Virtual Stores</p>
+    </div>
+
+    <div class="service-card">
+      <h3 data-i18n="service6_title">Solutions for Real Estate Agents</h3>
+      <p data-i18n="service6_item1">Digital Real Estate Management</p>
+      <p data-i18n="service6_item2">Property Registration</p>
+      <p data-i18n="service6_item3">Video Editing and Creation for Social Media</p>
+      <p data-i18n="service6_item4">Advertisement Creation</p>
+    </div>
+
+    <div class="service-card">
+      <h3 data-i18n="service7_title">Projects</h3>
+      <p data-i18n="service7_item1">Projects by other developers</p>
+      <p data-i18n="service7_item2">Websites or systems for NGOs</p>
+      <p data-i18n="service7_item3">Development of customized projects and strategic partnerships, adapted to the specific needs of each client or business.</p>
+    </div>
+
+    <div class="service-card">
+      <h3 data-i18n="service8_title">Digital Media Management</h3>
+      <p data-i18n="service8_text">Strategic planning and management of social networks with a focus on growth and digital positioning. Production of visual content, video and image editing, as well as organization of digital presence on platforms that need visibility and positioning.</p>
+    </div>
+
+  </div>
+
+  <div class="services-cta">
+    <a href="#contact-box" class="btn primary" data-i18n="services_cta">Talk to me now</a>
+  </div>
+</section>
+
+
+
+<section id="depoimentos" class="testimonials-section">
+  <h2 data-i18n="testimonials_title">Feedback</h2>
+
+  <div class="testimonials-box">
+    <button class="testimonial-arrow prev" aria-label="Depoimento anterior">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="testimonials-track-wrapper">
+      <div class="testimonials-track">
+
+        <article class="testimonial-card">
+          <p class="testimonial-text" data-i18n="testimonial1_text">“I wanted to position myself better on the internet, but I didn't know where to start. With Vivi's advice, I understood the importance of structuring my digital presence and decided to create my Google Business profile and a landing page. It was, without a doubt, one of the best investments I made for my business. Today I have more visibility, more credibility, and I'm already starting to see the results.”</p>
+          <h3>Stella Salerno</h3>
+          <span class="testimonial-role" data-i18n="testimonial1_role">Business Owner</span>
+          <small data-i18n="testimonial1_date">January 12, 2026</small>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="testimonial-text" data-i18n="testimonial2_text">“Vivi created my gelateria’s website and later helped me with Instagram. Today, my brand is much more organized and visible online. It was a great support!”</p>
+          <h3>Monica Garcia</h3>
+          <span class="testimonial-role" data-i18n="testimonial2_role">Shop owner at Gelateria Havana</span>
+          <small data-i18n="testimonial2_date">November 20, 2025</small>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="testimonial-text" data-i18n="testimonial3_text">“I only had some ideas and references, but I didn't have a defined visual identity or a clear direction. Vivi helped me organize everything and turn it into a functional website with communication that really makes sense. It was all very simple to resolve with her help.”</p>
+          <h3>Maria Macedo</h3>
+          <span class="testimonial-role" data-i18n="testimonial3_role">Clinical Psychologist</span>
+          <small data-i18n="testimonial3_date">March 30, 2026</small>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="testimonial-text">
+            “The visual identity created turned out modern, clear, and very aligned with the audience I wanted to reach.”
+          </p>
+          <h3>Ana Paula</h3>
+          <span class="testimonial-role" data-i18n="testimonial4_role">Real Estate Agent</span>
+          <small data-i18n="testimonial4_date">08 of February, 2025</small>
+        </article>
+
+      </div>
+    </div>
+
+    <button class="testimonial-arrow next" aria-label="Próximo depoimento">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+
+      <!-- CONTATO -->
+ <div id="contact-box" class="contact-overlay">
+  <div class="contact-card">
+    <h2 data-i18n="contact_title">Contact</h2>
+
+    <p data-i18n="contact_text">Support: Online via WhatsApp</p>
+
+    <a href="https://wa.me/5513996863507" target="_blank" class="btn whatsapp" data-i18n="contact_btn">
+      Send Message
+    </a>
+
+    <p>Email: assessoria@vivigomesdigital.com</p>
+
+    <a href="#" class="close-contact" data-i18n="contact_close">Close</a>
+  </div>
+</div>
+
+
+
+
+</main>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Ícones sociais -->
+    <div class="footer-social">
+      <a href="https://www.instagram.com/vivigomesdigital" target="_blank" rel="noopener noreferrer" aria-label="e">
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="mailto:assessoria@vivigomesdigital.com" aria-label="Enviar e-mail">
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      </a>
+      <a href="https://wa.me/5513996863507" target="_blank" rel="noopener noreferrer" aria-label="Conversar com a Psicóloga Giovanna Figueiredo pelo WhatsApp (abre em nova aba)">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+      </div>
+    </div>
+    <div class="footer-copy">
+    <span>&copy; 2026 Vivi Gomes Digital</span>
+    </div>
+  
+</footer>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

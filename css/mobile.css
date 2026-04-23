@@ -156,7 +156,7 @@
   }
 
   .hero-content h2 {
-    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    font-size: clamp(1.5rem, 7vw, 2.6rem);
     line-height: 1.15;
   }
 

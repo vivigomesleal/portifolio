@@ -83,7 +83,7 @@ button:focus-visible {
   gap: 10px;
 }
 
-.lang-switch-mobile button {
+.lang-switch-mobile a {
   min-width: 48px;
   min-height: 44px;
   padding: 10px 12px;
@@ -91,15 +91,16 @@ button:focus-visible {
   border: 1px solid rgba(255,255,255,0.12);
   cursor: pointer;
   color: #fff;
+  text-decoration: none;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.lang-switch-mobile button:hover,
-.lang-switch-mobile button:focus-visible,
-.lang-switch-mobile button.active {
+.lang-switch-mobile a:hover,
+.lang-switch-mobile a:focus-visible,
+.lang-switch-mobile a.active {
   background: linear-gradient(90deg, #0553fc, #661fff, #ad00e2);
   box-shadow: 0 0 14px rgba(102, 31, 255, 0.28);
 }
@@ -180,7 +181,8 @@ button:focus-visible {
   gap: 10px;
 }
 
-.lang-switch button {
+.lang-switch a {
+  text-decoration: none;
   padding: 6px 12px;
   border-radius: 20px;
   border: none;
@@ -193,11 +195,11 @@ button:focus-visible {
   transition: 0.3s;
 }
 
-.lang-switch button:hover, .lang-switch button:focus {
+.lang-switch a:hover, .lang-switch a:focus {
   background: linear-gradient(90deg, #0553fc, #661fff, #ad00e2);
 }
 
-.lang-switch button.active {
+.lang-switch a.active {
   background: linear-gradient(90deg, #0553fc, #661fff, #ad00e2);
   color: #fff;
 }
@@ -207,89 +209,8 @@ button:focus-visible {
   display: none;
 }
 
+ 
 
-
-/* SPLASH */
-#splash {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  background: rgba(10, 10, 18, 0.267);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-/* brilho de fundo */
-#splash::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at top, rgba(5, 83, 252, 0.18), transparent 35%),
-    radial-gradient(circle at center, rgba(102, 31, 255, 0.16), transparent 40%),
-    radial-gradient(circle at bottom, rgba(173, 0, 226, 0.14), transparent 35%);
-  filter: blur(25px);
-}
-
-/* TEXTO */
-.logo-text {
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  display: inline-block;
-
-  font-size: clamp(2.2rem, 6vw, 4.5rem);
-  font-family: "Parisienne", cursive;
-  font-weight: 400;
-  letter-spacing: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-
-  background: linear-gradient(
-    90deg,
-    var(--color-secondary),
-    var(--color-accent),
-    var(--color-justify)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* efeito digitando */
-.typing-text {
-  width: 0;
-  animation:
-    typing 3s steps(19, end) forwards,
-    blinkCursor 0.2s step-end infinite;
-}
-
-/* digitação */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 19ch;
-  }
-}
-
-/* cursor piscando */
-@keyframes blinkCursor {
-  50% {
-    border-color: transparent;
-  }
-}
-
-/* ESCONDER */
-.hidden {
-  display: none;
-}
 
 
 
@@ -366,7 +287,40 @@ button:focus-visible {
   box-shadow: 0 0 45px rgba(0,229,255,0.6);
 }
 
+.hero-content h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
 
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+
+
+  animation:
+    typing 2.6s steps(24, end) forwards,
+    blinkCursor 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+/* ################ SOBRE ################# */
 
 .about-section {
   padding: 130px 20px;
@@ -444,6 +398,24 @@ button:focus-visible {
   height: 250px;
   object-fit: cover;
   border-radius: 85%;
+
+  opacity: 0;
+  transform: scale(0.94);
+  filter: blur(10px);
+  animation: profileReveal 1s ease forwards;
+}
+
+@keyframes profileReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
 }
 
 /* TEXTO */
@@ -456,12 +428,46 @@ button:focus-visible {
   letter-spacing: 2px;
   font-family: "Inter", sans-serif;
   text-align: center;
+
+  opacity: 0;
+  transform: translateY(14px);
+  animation: aboutTitleIn 0.9s ease forwards;
+}
+
+@keyframes aboutTitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .about-content p {
   color: #000000;
   line-height: 1.7;
   margin-bottom: 30px;
+
+   opacity: 0;
+  filter: blur(12px);
+  transform: translateY(18px);
+  animation: dissolveText 1.4s ease forwards;
+  animation-delay: 0.35s;
+}
+
+@keyframes dissolveText {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
 }
 
 /* BOTÕES */
@@ -485,8 +491,9 @@ button:focus-visible {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   background: #2a2a3d;
+  box-shadow: 0 12px 30px rgba(124, 77, 255, 0.18);
 }
 
 .btn.primary {
@@ -509,6 +516,22 @@ button:focus-visible {
   color: #000;
 }
 
+.btn.primary:hover {
+  box-shadow: 0 12px 30px rgba(0, 229, 255, 0.30);
+}
+
+.btn.linkedin:hover {
+  box-shadow: 0 12px 30px rgba(55, 115, 193, 0.28);
+}
+
+.btn.github:hover {
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.18);
+}
+
+.btn.whatsapp:hover {
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.28);
+}
+
 /* SKILLS */
 .title-skills {
   color: #fff;
@@ -527,15 +550,44 @@ button:focus-visible {
 }
 
 .skills-icons img {
-  width: 48px;
-  transition: transform 0.3s ease;
+ width: 48px;
+  transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  will-change: transform;
+  transform: translateY(18px) scale(0.9);
+  animation: skillIconIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.skills-icons img:nth-child(1) { animation-delay: 0.20s; }
+.skills-icons img:nth-child(2) { animation-delay: 0.40s; }
+.skills-icons img:nth-child(3) { animation-delay: 0.60s; }
+.skills-icons img:nth-child(4) { animation-delay: 0.80s; }
+.skills-icons img:nth-child(5) { animation-delay: 1.00s; }
+.skills-icons img:nth-child(6) { animation-delay: 1.20s; }
+.skills-icons img:nth-child(7) { animation-delay: 1.40s; }
+.skills-icons img:nth-child(8) { animation-delay: 1.60s; }
+.skills-icons img:nth-child(9) { animation-delay: 1.80s; }
+
+@keyframes skillIconIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .skills-icons img:hover {
-  transform: scale(1.2);
+  transform: translateY(10px) scale(1.14);
+  filter: drop-shadow(0 8px 50px rgba(124, 77, 255, 0.28));
+
+  
 }
 
-/* OVERLAY */
+
+/* ############## CAIXA DE CONTATO ######################*/
 .contact-overlay {
   position: fixed;
   inset: 0;
@@ -578,7 +630,7 @@ button:focus-visible {
 @keyframes contactIn {
   from {
     opacity: 0;
-    transform: scale(0.9) translateY(20px);
+    transform: scale(0.8) translateY(20px);
   }
   to {
     opacity: 1;
@@ -1096,9 +1148,7 @@ button:focus-visible {
 .footer-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+  flex-direction: row-reverse;
 }
 
 .footer-logo img {
@@ -1107,6 +1157,7 @@ button:focus-visible {
 
 .footer-social {
   display: flex;
+  align-items: right;
   gap: 1rem;
 }
 
